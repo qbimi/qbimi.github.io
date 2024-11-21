@@ -1,4 +1,12 @@
+font-face{
+	font family:'Eyelashes';
+	src: url('Eyelashes.woff2') Format('woff2');
+	font-weight: 400;
+}
+
 body{
 	/* this is the outermost element on your page*/
 	background: yellow;
+	font-family: : 'Eyelashes';
+	font-size: 100px;
 }
