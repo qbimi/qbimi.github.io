@@ -1,12 +1,18 @@
 @font-face{
 	font-family: 'eyelashes';
 	src: url('eyelashes.otf') format('opentype');
-	font-weight: 400;
+	font-weight: 1500;
 }
 
-body{
-	/* this is the outermost element on your page*/
-	background: yellow;
-	font-family: 'eyelashes';
-	font-size: 100px;
+ body {
+  height: 100%;              /* Ensure body takes full height of the viewport */
+  margin: 0;                 /* Remove default margin */
+  display: flex;             /* Enable Flexbox */
+  justify-content: center;   /* Horizontally center content */
+  align-items: center;       /* Vertically center content */
+  flex-direction: column;    /* Stack elements vertically */
+  background: mintcream;     /* Background color */
+  font-family: 'eyelashes';  /* Use your font */
+  font-size: 200px;          /* Font size */
+  text-align: center;        /* Center-align the text inside elements */
 }

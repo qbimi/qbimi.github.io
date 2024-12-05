@@ -1,0 +1,63 @@
+body{
+	background: #d9d9d9;
+	font-family: Calibri, sans-serif;
+}
+
+.square{
+	width: 200px;
+	height: 200px;
+	background: lawngreen;
+	float: left;
+	margin: 10px;
+	mix-blend-mode: multiply;
+}
+
+
+#yellowsq, #bluesq{
+	background: #d9d9d9;
+	overflow: auto;
+}
+
+#bluesq .square{
+	background: blue;
+	width: 300px;
+	height: 300px;
+}
+
+#bluesq{
+	margin-top: -100px;
+	margin-left: 300px;
+}
+
+#blacksq .square{
+	background: black;
+	width: 100px;
+	height: 250px;
+}
+
+#text{
+	display: flex;
+}
+
+.left, .right{
+	flex: 1;
+}
+
+.left{
+	text-align: right;
+	margin-right: 1rem;
+}
+
+h1{
+	margin-bottom: 1rem;
+}
+
+h1,h2{
+	font-size: 2rem;
+}
+
+h2{
+	margin: 0;
+}
+
+
