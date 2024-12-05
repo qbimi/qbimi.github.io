@@ -1,0 +1,12 @@
+@font-face{
+	font-family: 'eyelashes';
+	src: url('eyelashes.otf') format('opentype');
+	font-weight: 400;
+}
+
+body{
+	/* this is the outermost element on your page*/
+	background: yellow;
+	font-family: 'eyelashes';
+	font-size: 100px;
+}
