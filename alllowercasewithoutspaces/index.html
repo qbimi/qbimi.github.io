@@ -1,83 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hover Effect with Images</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eyelashes</title>
   <style>
     @font-face {
       font-family: 'eyelashes';
       src: url('eyelashes.otf') format('opentype');
+      font-weight: 400;
     }
 
-    /* Full Page Centering with Flexbox */
-    html, body {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background: mintcream;
+    body {
+      background: lightgoldenrodyellow;
       font-family: 'eyelashes', sans-serif;
-      font-size: 50px;
+      font-size: 40px;
       text-align: center;
+      margin: 0;
+      padding: 20px;
     }
 
     .container {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px; /* Gap between words */
+      margin: 20px auto;
+      text-align: center;
     }
 
-    .hover-word {
+    /* 단어를 3개씩 한 줄에 배치 */
+    .word-row {
+      display: flex;
+      justify-content: center;
+      gap: 30px; /* 단어 간격 */
+      margin-bottom: 20px;
+    }
+
+    .hover-container {
       position: relative;
+      display: inline-block;
       cursor: pointer;
+    }
+
+    /* 이미지가 단어 위로 덮어지도록 설정 */
+    .hover-container img {
+      display: none; /* 기본적으로 이미지를 숨김 */
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500%;
+      height: 500%;
+      object-fit: cover;
+      z-index: 2; /* 이미지가 단어 위에 덮어지게 설정 */
+    }
+
+    /* 단어 스타일 */
+    .hover-container .word {
+      position: relative;
+      z-index: 1; /* 단어가 이미지 아래에 위치 */
+    }
+
+    /* 이미지가 단어 위로 올라오도록 설정 */
+    .hover-container:hover img {
+      display: block;
+    }
+
+    .menu {
+      margin-top: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 20px;
+      color: #333;
       transition: color 0.3s ease;
     }
 
-    /* Hidden image by default */
-    .image {
-      position: absolute;
-      top: 100%; /* Show below the text */
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .image img {
-      max-width: 200px; /* Resize image */
-      max-height: 150px;
-      object-fit: cover;
-    }
-
-    /* Show image when hovering over the word */
-    .hover-word:hover + .image {
-      opacity: 1;
+    .menu a:hover {
+      color: #007acc;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- First word with image -->
-    <span class="hover-word">Meow</span>
-    <div class="image">
-      <img src="meow.png" alt="Meow Image">
+    <div class="word-row">
+      <div class="hover-container">
+        <img src="meow.png" alt="Meow Image">
+        <span class="word">meow</span>
+      </div>
+      <div class="hover-container">
+        <img src="hello.png" alt="Hello Image">
+        <span class="word">hello</span>
+      </div>
+      <div class="hover-container">
+        <img src="moo.png" alt="Moo Image">
+        <span class="word">moo</span>
+      </div>
     </div>
 
-    <!-- Second word with image -->
-    <span class="hover-word">Hello</span>
-    <div class="image">
-      <img src="hello.png" alt="Hello Image">
+    <div class="word-row">
+      <div class="hover-container">
+        <img src="quack.png" alt="Quack Image">
+        <span class="word">quack</span>
+      </div>
+      <div class="hover-container">
+        <img src="chirp.png" alt="Chirp Image">
+        <span class="word">chirp</span>
+      </div>
+      <div class="hover-container">
+        <img src="oink.png" alt="Oink Image">
+        <span class="word">oink</span>
+      </div>
     </div>
 
-    <!-- Third word with image -->
-    <span class="hover-word">Woof</span>
-    <div class="image">
-      <img src="woof.png" alt="Woof Image">
+    <div class="word-row">
+      <div class="hover-container">
+        <img src="woof.png" alt="Woof Image">
+        <span class="word">woof</span>
+      </div>
+      <div class="hover-container">
+        <img src="baa.png" alt="Baa Image">
+        <span class="word">baa</span>
+      </div>
+      <div class="hover-container">
+        <img src="neigh.png" alt="Neigh Image">
+        <span class="word">neigh</span>
+      </div>
+    </div>
+
+    <div class="menu">
+      <a href="more/index2.html">More</a>
+      <a href="preview/index2.html">Preview</a>
     </div>
   </div>
 </body>

@@ -1,38 +1,44 @@
-@font-face{
-	font-family: 'eyelashes';
-	src: url('eyelashes.otf') format('opentype');
-	font-weight: 1500;
+@font-face {
+  font-family: 'eyelashes';
+  src: url('eyelashes.otf') format('opentype');
+  font-weight: 400;
 }
 
- body {
-  height: 100%;              /* Ensure body takes full height of the viewport */
-  margin: 0;                 /* Remove default margin */
-  display: flex;             /* Enable Flexbox */
-  justify-content: center;   /* Horizontally center content */
-  align-items: center;       /* Vertically center content */
-  flex-direction: column;    /* Stack elements vertically */
-  background: mintcream;     /* Background color */
-  font-family: 'eyelashes';  /* Use your font */
-  font-size: 200px;          /* Font size */
-  text-align: center;        /* Center-align the text inside elements */
+body {
+  /* 페이지의 전체 스타일 */
+  background: lightgoldenrodyellow;
+  font-family: 'eyelashes', sans-serif;
+  font-size: 400px;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
+.container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
 .image {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;  /* 기본적으로 이미지를 숨긴다 */
+  top: 100%; /* 텍스트 아래에 이미지가 나오도록 조정 */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; /* 기본적으로 이미지를 숨김 */
   transition: opacity 0.3s ease;
 }
 
 .image img {
-  width: 100%;
-  height: 100%;
+  max-width: 300px; /* 이미지 크기 제한 */
+  max-height: 200px;
   object-fit: cover;
 }
 
-/* hover 시 이미지가 보이도록 설정 */
+/* 텍스트 위로 마우스를 올렸을 때 이미지가 보이도록 설정 */
 .container:hover .image {
   opacity: 1;
 }
