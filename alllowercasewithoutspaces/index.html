@@ -1,39 +1,84 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Sample File</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hover Effect with Images</title>
+  <style>
+    @font-face {
+      font-family: 'eyelashes';
+      src: url('eyelashes.otf') format('opentype');
+    }
 
-EYELASHES
-
- <div class="container">
-    <div class="box"></div>
-    Meow Hello Woof 
-    <div class="box"></div>
-    Moo Quack Neigh
-    <div class="box"></div>
-     Oink Chirp Growl
-  </div>
-*
-   <style>
     /* Full Page Centering with Flexbox */
     html, body {
-      height: 100%;              /* Ensure body takes full height */
-      margin: 0;                 /* Remove default margin */
-      display: flex;             /* Enable flexbox */
-      justify-content: center;   /* Center horizontally */
-      align-items: center;       /* Center vertically */
-      text-align: center;        /* Center the text inside elements */
-      background: mintcream;     /* Background color */
-      font-family: 'eyelashes';  /* Custom font */
-      font-size: 200px;          /* Large font size */
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: mintcream;
+      font-family: 'eyelashes', sans-serif;
+      font-size: 50px;
+      text-align: center;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px; /* Gap between words */
+    }
+
+    .hover-word {
+      position: relative;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    /* Hidden image by default */
+    .image {
+      position: absolute;
+      top: 100%; /* Show below the text */
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .image img {
+      max-width: 200px; /* Resize image */
+      max-height: 150px;
+      object-fit: cover;
+    }
+
+    /* Show image when hovering over the word */
+    .hover-word:hover + .image {
+      opacity: 1;
     }
   </style>
+</head>
+<body>
+  <div class="container">
+    <!-- First word with image -->
+    <span class="hover-word">Meow</span>
+    <div class="image">
+      <img src="meow.png" alt="Meow Image">
+    </div>
 
+    <!-- Second word with image -->
+    <span class="hover-word">Hello</span>
+    <div class="image">
+      <img src="hello.png" alt="Hello Image">
+    </div>
+
+    <!-- Third word with image -->
+    <span class="hover-word">Woof</span>
+    <div class="image">
+      <img src="woof.png" alt="Woof Image">
+    </div>
+  </div>
 </body>
-
 </html>

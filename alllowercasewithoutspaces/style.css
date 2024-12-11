@@ -16,3 +16,23 @@
   font-size: 200px;          /* Font size */
   text-align: center;        /* Center-align the text inside elements */
 }
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;  /* 기본적으로 이미지를 숨긴다 */
+  transition: opacity 0.3s ease;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* hover 시 이미지가 보이도록 설정 */
+.container:hover .image {
+  opacity: 1;
+}
