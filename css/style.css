@@ -2,11 +2,22 @@
 	font-family: 'eyelashes';
 	src: url('eyelashes.otf') format('opentype');
 	font-weight: 400;
+	text-align: center;
 }
 
 body{
 	/* this is the outermost element on your page*/
-	background: yellow;
+	background: lightgoldenrodyellow;
 	font-family: 'eyelashes';
 	font-size: 100px;
+	text-align: center;
+}
+.cell {
+    font-size: 16px; /* 일반 cell의 폰트 크기 */
+    text-align: center;
+}
+
+.cell.special {
+    font-size: 50px; /* special 클래스의 폰트 크기 */
+    text-align: center;
 }
