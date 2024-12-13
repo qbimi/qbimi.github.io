@@ -1,0 +1,14 @@
+
+}.preview-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.small-text {
+    font-size: 48px;
+    transition: font-size 0.5s ease; /* Smooth transition */
+}
+
+.large-text {
+    font-size: 256px;
+}
