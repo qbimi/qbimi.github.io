@@ -31,6 +31,14 @@ body {
   opacity: 0; /* 기본적으로 이미지를 숨김 */
   transition: opacity 0.3s ease;
 }
+.blink {
+ position: absolute;
+  top: 100%; /* 텍스트 아래에 이미지가 나오도록 조정 */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; /* 기본적으로 이미지를 숨김 */
+  transition: skew:30deg;
+}
 
 .image img {
   max-width: 300px; /* 이미지 크기 제한 */
