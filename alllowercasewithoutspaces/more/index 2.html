@@ -1,22 +1,187 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>eyelashes</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body>
-Hi World!
-<div class="container">
-		<div class="cell special">
-		<a href="alllowercasewithoutspaces/index.html">eyelashes font</a></div>
-		<div class="cell"> <a href="markup/index.html">sementic markup</a>
-		<a href="test/test.html">test file</a>
-<a href="poster/poster.html">poster exercise</a>
-</div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Page</title>
+    <style>
+      /* 종이 질감 배경 -> 크림색으로 변경 */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Georgia', serif; /* 기본 폰트 */
+        background-color: #ffff; /* 크림색 배경 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: #333;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      /* 아이래쉬 폰트 적용 (아이래쉬 폰트를 추가해야 함) */
+      @font-face {
+        font-family: 'eyelashes';
+        src: url('eyelashes.otf') format('opentype'); /* 아이래쉬 폰트 파일 경로 */
+        font-weight: 400;
+      }
+
+      /* 큰 폰트 (아이래쉬) */
+      .large-text {
+        font-family: 'eyelashes', sans-serif; /* 아이래쉬 폰트 적용 */
+        font-size: 128px;
+        margin: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      /* 큰 텍스트에 hover 효과 */
+      .hover-container {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+          font-size: 350px;
+          margin-bottom: 100px;
+    }
+
+    /* Word style with hover skew */
+    .hover-container .word {
+      font-family: 'eyelashes', sans-serif; /* 아이래쉬 폰트 적용 */
+        font-size: 64px;
+      display: inline-block;
+      transition: transform 0.3s ease-in-out; /* Smooth skew transition */
+    }
+
+    .hover-container:hover .word {
+      transform: rotateX(120deg)rotateY(-10deg)translateY(-200px);
+    }
+
+      /* 작은 폰트 (조지아) */
+      .small-text {
+        font-family: 'Georgia', serif;
+        font-size: 15px;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 20px auto;
+      }
+
+      /* 이미지 스타일 */
+      .full-screen-img {
+        width: 105%;
+        height: 105vh;
+        object-fit: cover;
+        margin: 10px 0;
+      }
+
+      /* 중앙 정렬 및 레이아웃 */
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        width: 90%;
+        padding: 20px;
+      }
 
 
-</body>
+      /* 각 이미지 항목 스타일 */
+      .image-container img {
+        width: 105%; /* 한 줄에 두 개씩 배치 */
+        height: 105vh;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+             margin-bottom:100px;
+      }
 
+
+    </style>
+  </head>
+  <body>
+              <div class="hover-container">
+        <span class="word"> <p>“All men make mistakes,</p> but a good man yields when he knows his course is wrong, <p>and repairs the evil.”</p></span>
+      </div>
+       <div class="small-text">
+        - Sophocles, Antigone
+      </div>
+
+ 
+      <!-- 이미지 컨테이너 -->
+      <div class="image-container">
+         <img src="eyelashes finalizing ppt (dragged) 4.png" class="full-screen-img" alt="Image 1">
+      <div>
+
+           <div class="hover-container">
+        <span class="word"> <p> “Memories, even your most precious ones, fade surprisingly quickly.</p> But I don’t go along with that. <p>The memories I value most, I don’t ever see them fading.”</p></span>
+      </div>
+       <div class="small-text">
+        - Kazuo Ishiguro, Never Let Me Go
+      </div>
+
+        <div class="word-row">
+      <div class="hover-container">
+        <span class="word">RUSTLE</span>
+      </div>
+      <div class="hover-container">
+        <span class="word">FLIP</span>
+      </div>
+      <div class="hover-container">
+        <span class="word">CRINKLE</span>
+      </div>
+    </div>
+
+               <div class="hover-container">
+        <span class="word">   <p>“Can the past help the present,</p> <p>Can the dead save the living,”</p></span>
+      </div>
+       <div class="small-text"><p style="margin-bottom: 100px;">
+     
+        - Han Kang, Nobel Lecture
+      </div>
+
+               <div class="word-row">
+      <div class="hover-container">
+        <span class="word">AHEM</span>
+      </div>
+      <div class="hover-container">
+        <span class="word">MURMUR</span>
+      </div>
+      <div class="hover-container">
+        <span class="word">HUSH</span>
+      </div>
+    </div>
+
+            <div class="image-container">
+        <img src="eyelashes finalizing ppt (dragged) 2.png" class="full-screen-img" alt="Image 1">
+
+      </div>
+
+
+   <div class="large-text">
+          EYELASHES
+          <div>
+
+      <!-- 작은 텍스트 --> 
+      <div class="small-text"> 
+        <p> is a display typeface with unique features inspired from the shapes of eyelashes. It is a project for 24/FA DSD-3662-A course at <a href="https://sva.edu">SVA</a>. It is originally designed to be used for window display signs but the usage is not limited to them. Initial sketch was done with a broad nib pen and following typeface drawn in Robofont tried to preserve the unique characteristics.</p>
+
+  <p>
+  This website is dedicated to introducing the Eyelashes web typeface to everyone. Eyelashes are not exclusive to humans. Therefore, the 
+  <a href="../index.html">Welcome</a> page includes sound words for animals with eyelashes. It is suitable for book titles. 
+  <a href="index.html">More</a> page includes more applications and sound words for library or theater settings. Lastly, on 
+  <a href="../preview/index 2.html">Preview</a> page, the font can be viewed in two different scales with an option for dark mode.
+</p>
+
+  <!-- 큰 텍스트 -->
+      <div class="large-text">
+        by <a href="https://kyubingil.com">Kyubin Gil</a>
+      </div>
+
+
+      </div>
+
+      
+
+    
+    </div>
+  </body>
 </html>

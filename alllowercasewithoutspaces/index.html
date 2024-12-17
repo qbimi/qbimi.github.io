@@ -8,83 +8,98 @@
     @font-face {
       font-family: 'eyelashes';
       src: url('eyelashes.otf') format('opentype');
-      font-weight: 400;
+      font-weight: 200;
     }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* 모든 요소의 padding과 border가 크기에 포함되도록 설정 */
+}
 
-    body {
-      background: ivory;
-      font-family: 'eyelashes', sans-serif;
-      font-size: 550px;
-      text-align: center;
-      margin: 0;
-      padding: 10px;
-    }
+body {
+  background: ivory;
+  font-family: 'eyelashes', sans-serif;
+  font-size: 750px;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
 
+.container {
+  margin: 0 auto;  /* 상단 여백을 0으로 설정하여 여백 제거 */
+  text-align: center;
+  padding: 0;  /* 불필요한 padding 제거 */
+}
 
-    .container {
-      margin: 10px auto;
-      text-align: center;
-    }
+.word-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* 간격을 좁히지 않도록 유지 */
+  margin-bottom: 10px;  /* 단어 간 간격 줄이기 */
+}
 
-    .word-row {
-      display: flex;
-      justify-content: center;
-      gap: 30px; /* Space between words */
-      margin-bottom: 20px;
-    }
+.hover-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 395px;
+  margin: 0;  /* hover-container 간의 불필요한 여백을 없앰 */
+}
 
-    .hover-container {
-      position: relative;
-      display: inline-block;
-      cursor: pointer;
-          font-size: 350px;
-    }
+/* Word style with hover skew */
+.hover-container .word {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out; /* 부드러운 skew 전환 */
+}
 
-    /* Word style with hover skew */
-    .hover-container .word {
-      display: inline-block;
-      transition: transform 0.3s ease-in-out; /* Smooth skew transition */
-    }
+.hover-container:hover .word {
+  transform: rotateX(120deg) rotateY(-10deg) translateY(-200px);
+}
 
-    .hover-container:hover .word {
-      transform: rotateX(120deg)rotateY(-10deg)translateY(-200px);
-    }
+.menu {
+  margin-top: 5px;  /* 메뉴 위 여백을 최소화 */
+  font-family: 'Georgia', serif;
+}
 
-    .menu {
-      margin-top: 20px;
-      font-family: 'Avenir', sans-serif;
-    }
+.menu a {
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 15px;
+  color: #333;
+  transition: color 0.3s ease;
+}
 
-    .menu a {
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 20px;
-      color: #333;
-      transition: color 0.3s ease;
-    }
+.menu a:hover {
+  color: #007acc;
+}
 
-    .menu a:hover {
-      color: #007acc;
-    }
-      .blinking {
-      display: inline-block;
-        transition: transform 0.3s ease-in-out; 
-      animation: blink 2s infinite alternate; /* Infinite blinking */
-      transform-origin: bottom center; /* Rotate from bottom */
-    }
+.blinking {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  animation: blink 2s infinite alternate; /* 블링크 애니메이션 */
+  transform-origin: bottom center; /* 회전 기준점 */
+  margin-bottom: 5px;  /* 블링크와 그 아래 요소 간 간격을 최소화 */
+}
 
-    @keyframes blink {
-      0% {
-        transform: rotateX(120deg)rotateY(-10deg)translateY(-20px)
-      }
-    }
+@keyframes blink {
+  0% {
+    transform: rotateX(120deg) rotateY(-10deg) translateY(-20px);
+  }
+}
+
+/* Remove extra space between word rows */
+.word-row + .word-row {
+  margin-top: 5px;  /* 단어줄 간의 간격 줄이기 */
+}
+
 
   </style>
 </head>
 <body>
    <div class="container">
-    <div class="blinking"style="margin-bottom: 250px;">eyelashes</div> <!-- Blinking word -->
+    <div class="blinking"style="margin-bottom: 300px;">eyelashes</div> <!-- Blinking word -->
   </div>
+  <div>
   <div class="container">
     <div class="word-row">
       <div class="hover-container">
@@ -97,7 +112,6 @@
         <span class="word">moo</span>
       </div>
     </div>
-
     <div class="word-row">
       <div class="hover-container">
         <span class="word">quack</span>
@@ -109,7 +123,6 @@
         <span class="word">oink</span>
       </div>
     </div>
-
     <div class="word-row">
       <div class="hover-container">
         <span class="word">woof</span>
@@ -121,11 +134,10 @@
         <span class="word">neigh</span>
       </div>
     </div>
-
     <div class="menu">
       <a href="more/index 2.html">More</a>
       <a href="preview/index 2.html">Preview</a>
     </div>
-  </div>
 </body>
+
 </html>

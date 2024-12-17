@@ -55,6 +55,23 @@
         gap: 20px;
       }
 
+      .menu {
+        margin-top: 0px;
+        font-family: 'Georgia', serif;
+      }
+
+      .menu a {
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 15px;
+        color: #333;
+        transition: color 0.3s ease;
+      }
+
+      .menu a:hover {
+        color: #007acc;
+      }
+
       button {
         font-size: 18px;
         font-family: Georgia, serif; /* 버튼 폰트 Georgia */
@@ -87,6 +104,15 @@
       body.dark-mode button:hover {
         background-color: #FFF;
         color: #000;
+      }
+
+      /* 메뉴 다크모드 스타일 */
+      body.dark-mode .menu a {
+        color: #FFF;
+      }
+
+      body.dark-mode .menu a:hover {
+        color: #007acc;
       }
     </style>
   </head>
@@ -125,10 +151,10 @@
           button.innerText = '64pt';
         } else {
           previews.forEach((el) => {
-            el.style.fontSize = '256px';
+            el.style.fontSize = '512px'; /* 변경된 크기 */
             el.style.transform = 'translateY(-50px)'; /* 크기에 맞춰 보정 */
           });
-          button.innerText = '256pt';
+          button.innerText = '512pt';
         }
 
         isLargeFont = !isLargeFont;
@@ -148,5 +174,13 @@
         }
       }
     </script>
+
+    <div class="menu">
+      <p style="margin-top: 150px;">
+        <a href="../index.html">Back</a>
+        <a href="../index 2.html">More</a>
+      </p>
+    </div>
   </body>
 </html>
+
